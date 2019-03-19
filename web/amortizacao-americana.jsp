@@ -13,6 +13,6 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
-        <h1>Hello World!</h1>
+        <h1>Amortização Americana</h1>
     </body>
 </html>
