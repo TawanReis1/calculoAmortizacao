@@ -49,7 +49,7 @@
                     double amortizacao = 0;
                                       
         %>
-                    <table border="1">
+                    <table class="table">
                         <tr>
                             <th>Nº de Prestação</th>
                             <th>Amortização</th>
