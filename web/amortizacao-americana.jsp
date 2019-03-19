@@ -45,6 +45,9 @@
                     int meses = Integer.parseInt(qMeses);
                     double juros=taxaJuros;
                     double saldoDevedor = emprestimo;
+                    double prestacao = 0;
+                    double amortizacao = 0;
+                                      
         %>
                     <table border="1">
                         <tr>
@@ -58,12 +61,26 @@
                         <tr>
                             <%
                                 for(int i=1; i<=meses; i++) {
+                                    if(i<meses){
                                     juros= (taxaJuros/100)*saldoDevedor;
-                                    saldoDevedor = saldoDevedor - prestacao;
+                                    saldoDevedor = saldoDevedor;
+                                    prestacao = juros;
+                                    amortizacao = 0;
+                                }
+                                    else{
+                                     juros= (taxaJuros/100)*saldoDevedor;
+                                    saldoDevedor = saldoDevedor;
+                                    prestacao = juros + emprestimo;
+                                    amortizacao = prestacao;
+                                    saldoDevedor = 0;
+                                    
+                                    }
+                                  
                             %>
                             <th><%= i %></th>
-                            <td><%= NumberFormat.getCurrencyInstance().format(prestacao) %></td>
+                            <td><%= NumberFormat.getCurrencyInstance().format(amortizacao) %></td>
                             <td><%= NumberFormat.getCurrencyInstance().format(juros) %></td>
+                            <td><%= NumberFormat.getCurrencyInstance().format(prestacao) %></td>
                             <td><%= NumberFormat.getCurrencyInstance().format(saldoDevedor) %></td>
                         </tr>
                             <%}%>
