@@ -16,24 +16,18 @@
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
         <h1>Amortização Americana</h1>
-        <form>
-            Digite os dados exigidos
-            <br>
-            <br>
-            Valor do Empréstimo:    
-            <input type="text" name="valorEmprestimo"/>
-            <br>
-            Taxa de Juros ao Mês (% de 1 a 100):   
-            <input type="text" name="valorJuros"/>
-            <br>
-            Quantidade de Parcelas:    
-            <input type="text" name="qMeses"/>
-            <br>
-            <br>
-            <input type="submit" value="calcular"/>
-            <br>
+        <form style="margin-left: 15px">
+            <label for="value">Digite o valor do empréstimo:</label><br>
+            <input type="text" name="valorEmprestimo"/><br><br>
+            
+            <label for="months">Digite o número de meses:</label><br>
+            <input type="text" name="qMeses"/><br><br>
+            
+            <label for="fee">Digite a taxa de Juros(%):</label><br>
+            <input type="text" name="valorJuros"/><br><br>
+            
+            <input type="submit" name="result" value="Calcular">
         </form>
-        <hr/>
         <%
             String valorEmprestimo = request.getParameter("valorEmprestimo");
             String valorJuros = request.getParameter("valorJuros");
