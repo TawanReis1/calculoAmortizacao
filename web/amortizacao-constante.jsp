@@ -11,13 +11,13 @@
         <h1>Amortização Constante</h1>
         <form style="margin-left: 15px">
             <label for="value">Digite o valor que deseja financiar:</label><br>
-            <input name="value" type="text"><br><br>
+            <input name="value" type="text" class="form-control" style="width: 250px"><br><br>
             
             <label for="months">Digite o número de meses:</label><br>
-            <input name="months" type="number"><br><br>
+            <input name="months" type="number" class="form-control" style="width: 250px"><br><br>
             
             <label for="fee">Digite a taxa da amortização(%):</label><br>
-            <input name="fee" type="string"><br><br>
+            <input name="fee" type="text" class="form-control" style="width: 250px"><br><br>
             
             <input type="submit" name="result" value="Calcular">
         </form>
