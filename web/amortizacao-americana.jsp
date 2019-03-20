@@ -21,7 +21,7 @@
             <input type="text" name="valorEmprestimo"/><br><br>
             
             <label for="months">Digite o número de meses:</label><br>
-            <input type="text" name="qMeses"/><br><br>
+            <input type="number" name="qMeses"/><br><br>
             
             <label for="fee">Digite a taxa de Juros(%):</label><br>
             <input type="text" name="valorJuros"/><br><br>
