@@ -14,6 +14,7 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
-        <h1>home</h1>
+        <h1 style="margin-bottom: 500px">home</h1>
+        <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>

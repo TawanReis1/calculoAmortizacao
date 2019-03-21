@@ -86,6 +86,7 @@
                <br/>
                <br/>         
                 <%}catch(Exception e){}}%>
-              
+            <div style="margin-bottom: 50px"></div>
+        <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>
