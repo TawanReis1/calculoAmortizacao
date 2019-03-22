@@ -15,16 +15,17 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
-        <h1>Amortização Americana</h1>
+        <h1 style="margin-left: 10px">Amortização Americana</h1>
+        <br>
         <form style="margin-left: 15px">
             <label for="value">Digite o valor do empréstimo:</label><br>
-            <input type="text" name="valorEmprestimo"/><br><br>
+            <input type="text" name="valorEmprestimo" class="form-control" style="width: 250px"><br><br>
             
             <label for="months">Digite o número de meses:</label><br>
-            <input type="number" name="qMeses"/><br><br>
+            <input type="number" name="qMeses" class="form-control" style="width: 250px"><br><br>
             
             <label for="fee">Digite a taxa de Juros(%):</label><br>
-            <input type="text" name="valorJuros"/><br><br>
+            <input type="text" name="valorJuros" class="form-control" style="width: 250px"><br><br>
             
             <input type="submit" name="result" value="Calcular">
         </form>

@@ -8,7 +8,8 @@
     <body>
         <%@include file="WEB-INF/jspf/header.jspf"%>
         
-        <h1>Amortização Constante</h1>
+        <h1 style="margin-left: 10px">Amortização Constante</h1>
+        <br>
         <form style="margin-left: 15px">
             <label for="value">Digite o valor que deseja financiar:</label><br>
             <input name="value" type="text" class="form-control" style="width: 250px"><br><br>

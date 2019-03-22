@@ -32,7 +32,7 @@
   <div class="container">     
     <div class="row">
       <div class="col-sm-3 ">
-       <img src="luiz.jpg" class="rounded-circle" alt="Cinque Terre" width="220" height="220"> 
+       <img src="luiz.jpg" class="rounded-circle" alt="luiz.jpg" width="220" height="220"> 
       </div>
       <div class="col-sm-3">
           <br>
@@ -58,7 +58,7 @@
   <div class="container">     
     <div class="row">
       <div class="col-sm-3 ">
-       <img src="tawan.jpg" class="rounded-circle" alt="Cinque Terre" width="220" height="220"> 
+       <img src="tawan.jpg" class="rounded-circle" alt="tawan.jpg" width="220" height="220"> 
       </div>
       <div class="col-sm-3">
           <br>
@@ -74,9 +74,9 @@
     </div>
   </div>
 </div>
+            <br>
+            <br>
             
-            <br>
-            <br>
                         
               <div class="container">
   <h2>Vinicius Moura</h2>
@@ -85,7 +85,7 @@
   <div class="container">     
     <div class="row">
       <div class="col-sm-3 ">
-       <img src="vini.jpg" class="rounded-circle" alt="Cinque Terre" width="220" height="220"> 
+       <img src="vini.jpg" class="rounded-circle" alt="vini.jpg" width="220" height="220"> 
       </div>
       <div class="col-sm-3">
           <br>
