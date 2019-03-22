@@ -34,21 +34,18 @@
       <div class="col-sm-3 ">
        <img src="luiz.jpg" class="rounded-circle" alt="luiz.jpg" width="220" height="220"> 
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-8">
           <br>
           <br>
           <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-        <p class="text-secondary">.text-secondary</p>
+        <p class="text-secondary">
+            Responsável pela Amortização Americana, é um tipo de quitação de empréstimo que favorece aqueles que desejam pagar o valor principal através de uma única parcela, porém os juros devem ser pagos periodicamente ou, dependendo do contrato firmado entre as partes, os juros são capitalizados e pagos junto ao valor principal.</p>
+        
       </div>
     </div>
   </div>
-</div>
-              <br>
+            </div>
+            <br>
             <br>
                         
               <div class="container">
@@ -60,16 +57,11 @@
       <div class="col-sm-3 ">
        <img src="tawan.jpg" class="rounded-circle" alt="tawan.jpg" width="220" height="220"> 
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-8">
           <br>
           <br>
           <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-        <p class="text-secondary">.text-secondary</p>
+        <p class="text-secondary">Responsável pela Amortização Constante, é um tipo de quitação de empréstimo que favorece aqueles que desejam pagar o valor principal através de uma única parcela, porém os juros devem ser pagos periodicamente ou, dependendo do contrato firmado entre as partes, os juros são capitalizados e pagos junto ao valor principal.</p>
       </div>
     </div>
   </div>
@@ -87,16 +79,12 @@
       <div class="col-sm-3 ">
        <img src="vini.jpg" class="rounded-circle" alt="vini.jpg" width="220" height="220"> 
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-8">
           <br>
           <br>
           <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-        <p class="text-secondary">.text-secondary</p>
+      
+        <p class="text-secondary">Responsável pela Tabela Price, são prestações fixas ao longo do período de quitação do bem, sem aumento por algum tipo de correção (dependendo do contrato de financiamento). O método Price consiste em calcular prestações fixas, sendo que o saldo devedor é amortizado aos poucos, até a quitação do débito. Os juros estão embutidos nas prestações.</p>
       </div>
     </div>
   </div>

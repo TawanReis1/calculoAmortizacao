@@ -45,15 +45,17 @@
                     double amortizacao = 0;
                                       
         %>
-                    <table class="table">
+                    <table style="margin-left: 15px; margin-top: 15px" class="table table-hover">
+                        <thead class="thead-dark">
                         <tr>
                             <th>Nº de Prestação</th>
                             <th>Amortização</th>
                             <th>Juros(<%=taxaJuros%>% de R$<%=emprestimo%>)</th>
                             <th>Prestação</th>
                             <th>Dívida</th>
+                            
                         </tr>
-                        
+                        </thead>
                         <tr>
                             <%
                                 for(int i=1; i<=meses; i++) {
