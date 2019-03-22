@@ -1,7 +1,4 @@
 
-
-
-
 <%@page import="java.text.NumberFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,12 +7,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body>
+    
+</html><body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
         <h1>Tabela Price</h1>
         
             Preencha os campos
-            
+            <form>
             <br>
             <br>
             Valor
@@ -24,36 +22,32 @@
             <br>
             Taxa
             <br>
-            <input type="number" name="taxa">
+            <input type="number" name="nTaxa">
             <br>
             Periodo em meses
             <br>
-            <input type="number" name="meses">
+            <input type="number" name="nMeses">
             <br>    
-            <input type="submit" name="enviar"/>
-           
+            <input type="submit" name="result" value="enviar"/>
+           </form>
             
             <% String valorTotal= request.getParameter("valorTotal"); %> 
             <% String nTaxa= request.getParameter("nTaxa");  %>
             <% String nMeses= request.getParameter("nMeses"); %> 
             
-            
+                
              <%  if((valorTotal!="" && valorTotal!=null )|| (nTaxa!="" && nTaxa!=null) || 
                      (nMeses!="" && nMeses!=null)){ %>
                      <%  try {  %>
                         <%  double dinheiro = Double.parseDouble(valorTotal);
-                            double juros = Double.parseDouble(nTaxa);
-                            double parcelas= Double.parseDouble(nMeses)/ 100;
-                            double saldoDevedor= dinheiro;
+                            double juros = Double.parseDouble(nTaxa) / 100;
+                            int parcelas= Integer.parseInt(nMeses);
+                            double saldoDevedor = dinheiro;
                             double amortizacao = 0;
                             double valor = 0 ;
                             double mds=0;
-                            double sdm =0;
-                     
-                     
-                        
                         %>          
-                      <table>
+                      <table class="table">
                       <tr>
                           <th>Parcela</th>
                           <th>Valor</th>
@@ -62,53 +56,49 @@
                           <th>Saldo devedor</th>
                               
                       </tr>
+                      <tr>  
+                          <td> <b>0</b>  </td>
+                          <td> - </td>
+                          <td> - </td>
+                          <td> - </td>
+                          <td> R$ <%= dinheiro %> </td>
+                      
+                      
+                      </tr>
                      
-                      
+                      <tr>
+                          <% mds =(Math.pow((1+juros),parcelas)) ;     
+                            //mds = 1.36
+                            valor = mds;
+                            mds = (mds * juros) / (valor-1);
+                            mds= dinheiro * mds;
+                            valor = mds;
+                            
+                            %>
             <%  for(int i=1 ; i<=parcelas; i++){
-                   if(i<parcelas){
-                    juros= (1+parcelas); 
-                    mds =(Math.pow(juros,parcelas)) ;
-                    //1.36
-                    sdm = mds;
-                    //sdm = 1.36
-                    mds= mds * parcelas;
-                    mds= mds / (sdm - 1) ;
-                    amortizacao = mds;
-                   }}
-      %>
-                
+                    mds=0;
+                    mds = juros * dinheiro ;
+                    amortizacao = valor - mds;
+                    saldoDevedor = dinheiro - amortizacao;
+                    dinheiro= dinheiro - amortizacao;
                     
-                           
-                        
-                           
-
+                    if(i==parcelas){    
+                   saldoDevedor=0;
+                    }
+                    
+                   %>
                 
-}
-                      
-             
-                
-                
-                 
-            
-            
+                     <th><%= i %></th>
+                     <td><%= NumberFormat.getCurrencyInstance().format(valor) %></td>         
+                     <td><%= NumberFormat.getCurrencyInstance().format(mds) %></td>         
+                     <td><%= NumberFormat.getCurrencyInstance().format(amortizacao) %></td>         
+                     <td><%= NumberFormat.getCurrencyInstance().format(saldoDevedor) %></td>                  
+                     </tr>
+                        <% }%> 
             <% }catch(Exception e){} }  %>
-            
-            
-                
-                
-          
-            
-           
-            
-                
-                
-               
-                
-                
-                
-                
-           
             <div style="margin-bottom: 50px"></div>
         <%@include file="WEB-INF/jspf/footer.jspf" %>
+     
     </body>
+          
 </html>
