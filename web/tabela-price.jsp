@@ -8,27 +8,28 @@
         <title>JSP Page</title>
     </head>
     
-</html><body>
+
+<body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
-        <h1>Tabela Price</h1>
         
-            Preencha os campos
-            <form>
+        <h1 style="margin-left: 10px">Tabela Price</h1>
+        
+            <form style="margin-left: 15px">
+            
             <br>
-            <br>
-            Valor
-            <br>
-            <input type="number" name="valorTotal">
-            <br>
-            Taxa
-            <br>
-            <input type="number" name="nTaxa">
-            <br>
-            Periodo em meses
-            <br>
-            <input type="number" name="nMeses">
-            <br>    
-            <input type="submit" name="result" value="enviar"/>
+            <label for="valorTotal">Digite o Valor do Financiamento:</label><br>
+            <input name="valorTotal" type="number" class="form-control" style="width: 250px">
+                <br>
+                <br>
+            <label for="nMeses">Digite o número de meses:</label><br>
+            <input name="nMeses" type="number" class="form-control" style="width: 250px">
+                <br>
+                <br>
+            <label for="nTaxa">Digite a Taxa de Juros(%): </label><br>
+            <input name="nTaxa" type="number" class="form-control" style="width: 250px">
+                <br>
+                <br>
+            <input type="submit" name="result" value="Calcular"/>
            </form>
             
             <% String valorTotal= request.getParameter("valorTotal"); %> 
@@ -48,14 +49,17 @@
                             double mds=0;
                         %>          
                       <table class="table">
+                          <table style="margin-left: 15px; margin-top: 15px" class="table table-hover">
+                              <thead class="thead-dark">
                       <tr>
                           <th>Parcela</th>
                           <th>Valor</th>
                           <th>Juros(%)</th>
                           <th>Amortizaão sobre saldo devedor</th>
                           <th>Saldo devedor</th>
-                              
+                             
                       </tr>
+                      </thead> 
                       <tr>  
                           <td> <b>0</b>  </td>
                           <td> - </td>
@@ -96,9 +100,10 @@
                      </tr>
                         <% }%> 
             <% }catch(Exception e){} }  %>
+            
+            
             <div style="margin-bottom: 50px"></div>
         <%@include file="WEB-INF/jspf/footer.jspf" %>
-     
     </body>
           
 </html>

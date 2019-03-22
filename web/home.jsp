@@ -13,6 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <img src="nero.jpg" class="img-fluid" alt="Imagem responsiva">
         <%@include file="WEB-INF/jspf/header.jspf" %>
         <h1 style="margin-bottom: 500px">home</h1>
         <%@include file="WEB-INF/jspf/footer.jspf" %>
