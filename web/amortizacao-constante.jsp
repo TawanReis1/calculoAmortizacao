@@ -39,10 +39,10 @@
                     <thead class="thead-dark">
                         <tr>
                             <th style="text-align: center">Meses</th>
-                            <th style="text-align: center">Saldo devedor(R$)</th>
-                            <th style="text-align: center">Amortização(R$)</th>
+                            <th style="text-align: center">Saldo devedor</th>
+                            <th style="text-align: center">Amortização</th>
                             <th style="text-align: center">Juros</th>
-                            <th style="text-align: center">Prestação(R$) (Amortização + Juros)</th>
+                            <th style="text-align: center">PrestaçãoAmortização + Juros)</th>
                         </tr>
                     </thead>
                     <tbody>
