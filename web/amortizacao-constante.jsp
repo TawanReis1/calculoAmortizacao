@@ -51,7 +51,7 @@
                     <tbody>
                         <tr>
                             <td style="text-align: center">0</td>
-                            <td style="text-align: center">R$<%= value %></td>
+                            <td style="text-align: center"><%= NumberFormat.getCurrencyInstance().format(value) %></td>
                             <td style="text-align: center"> - </td>
                             <td style="text-align: center"> - </td>
                             <td style="text-align: center"> - </td>
@@ -66,15 +66,15 @@
                                 <% value = value - valueAmortization; %>
                                 <td style="text-align: center"><%= NumberFormat.getCurrencyInstance().format(value) %></td>
                                 
-                                <td style="text-align: center">R$<%= NumberFormat.getCurrencyInstance().format(valueAmortization) %></td>
+                                <td style="text-align: center"><%= NumberFormat.getCurrencyInstance().format(valueAmortization) %></td>
                                 
                                 <% valueFee = (value + valueAmortization) * fee; %>
-                                <td style="text-align: center">R$<%= NumberFormat.getCurrencyInstance().format(valueFee) %></td>
+                                <td style="text-align: center"><%= NumberFormat.getCurrencyInstance().format(valueFee) %></td>
                                 
                                 <% acumFees = acumFees + ((value + valueAmortization) * fee); %>
                                 
                                 <% valuePrestation = valueAmortization + ((value + valueAmortization) * fee);%>
-                                <td style="text-align: center">R$<%= NumberFormat.getCurrencyInstance().format(valuePrestation) %></td>
+                                <td style="text-align: center"><%= NumberFormat.getCurrencyInstance().format(valuePrestation) %></td>
                                 
                                 <% acumAmortization = acumAmortization + (valueAmortization + ((value + valueAmortization) * fee)); %>
                             </tr>
@@ -84,9 +84,9 @@
                             <tr>
                                 <td style="text-align: center">Total</td>
                                 <td style="text-align: center"> - </td>
-                                <td style="text-align: center">R$<%= NumberFormat.getCurrencyInstance().format(initialValue) %></td>
-                                <td style="text-align: center">R$<%= NumberFormat.getCurrencyInstance().format(acumFees) %></td>
-                                <td style="text-align: center">R$<%= NumberFormat.getCurrencyInstance().format(acumAmortization) %></td>
+                                <td style="text-align: center"><%= NumberFormat.getCurrencyInstance().format(initialValue) %></td>
+                                <td style="text-align: center"><%= NumberFormat.getCurrencyInstance().format(acumFees) %></td>
+                                <td style="text-align: center"><%= NumberFormat.getCurrencyInstance().format(acumAmortization) %></td>
                             </tr>  
                         </tbody>
                 </table>              
