@@ -42,7 +42,7 @@
                             <th style="text-align: center">Saldo devedor</th>
                             <th style="text-align: center">Amortização</th>
                             <th style="text-align: center">Juros</th>
-                            <th style="text-align: center">PrestaçãoAmortização + Juros)</th>
+                            <th style="text-align: center">Prestação(Amortização + Juros)</th>
                         </tr>
                     </thead>
                     <tbody>
