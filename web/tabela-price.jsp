@@ -55,7 +55,7 @@
                           <th>Parcela</th>
                           <th>Valor</th>
                           <th>Juros(%)</th>
-                          <th>Amortizaão sobre saldo devedor</th>
+                          <th>Amortização sobre saldo devedor</th>
                           <th>Saldo devedor</th>
                              
                       </tr>
@@ -99,11 +99,10 @@
                      <td><%= NumberFormat.getCurrencyInstance().format(saldoDevedor) %></td>                  
                      </tr>
                         <% }%> 
+                          </table>
             <% }catch(Exception e){} }  %>
-            
-            
             <div style="margin-bottom: 50px"></div>
-        <%@include file="WEB-INF/jspf/footer.jspf" %>
+            <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
-          
+
 </html>
