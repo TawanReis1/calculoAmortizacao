@@ -1,3 +1,4 @@
+<%@page import="java.text.NumberFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -29,7 +30,9 @@
                 <% double initialValue = Double.parseDouble(request.getParameter("value"));%>
                 <% int months = Integer.parseInt(request.getParameter("months"));%>
                 <% double fee = (Double.parseDouble(request.getParameter("fee"))) / 100;%>
+                <% double valueFee = 0; %>
                 <% double valueAmortization = 0; %>
+                <% double valuePrestation = 0; %>
                 <% double acumAmortization = 0; %>
                 <% double acumFees = 0; %>
                 
@@ -59,11 +62,20 @@
                         <tbody>
                             <tr>
                                 <td style="text-align: center"><%= i %></td>
-                                <td style="text-align: center">R$<%= value = value - valueAmortization %></td>
-                                <td style="text-align: center">R$<%= valueAmortization %></td>
-                                <td style="text-align: center">R$<%= (value + valueAmortization) * fee %></td>
+                                
+                                <% value = value - valueAmortization; %>
+                                <td style="text-align: center"><%= NumberFormat.getCurrencyInstance().format(value) %></td>
+                                
+                                <td style="text-align: center">R$<%= NumberFormat.getCurrencyInstance().format(valueAmortization) %></td>
+                                
+                                <% valueFee = (value + valueAmortization) * fee; %>
+                                <td style="text-align: center">R$<%= NumberFormat.getCurrencyInstance().format(valueFee) %></td>
+                                
                                 <% acumFees = acumFees + ((value + valueAmortization) * fee); %>
-                                <td style="text-align: center">R$<%= valueAmortization + ((value + valueAmortization) * fee) %></td>
+                                
+                                <% valuePrestation = valueAmortization + ((value + valueAmortization) * fee);%>
+                                <td style="text-align: center">R$<%= NumberFormat.getCurrencyInstance().format(valuePrestation) %></td>
+                                
                                 <% acumAmortization = acumAmortization + (valueAmortization + ((value + valueAmortization) * fee)); %>
                             </tr>
                         </tbody>
@@ -72,9 +84,9 @@
                             <tr>
                                 <td style="text-align: center">Total</td>
                                 <td style="text-align: center"> - </td>
-                                <td style="text-align: center">R$<%= initialValue %></td>
-                                <td style="text-align: center">R$<%= acumFees %></td>
-                                <td style="text-align: center">R$<%= acumAmortization %></td>
+                                <td style="text-align: center">R$<%= NumberFormat.getCurrencyInstance().format(initialValue) %></td>
+                                <td style="text-align: center">R$<%= NumberFormat.getCurrencyInstance().format(acumFees) %></td>
+                                <td style="text-align: center">R$<%= NumberFormat.getCurrencyInstance().format(acumAmortization) %></td>
                             </tr>  
                         </tbody>
                 </table>              
