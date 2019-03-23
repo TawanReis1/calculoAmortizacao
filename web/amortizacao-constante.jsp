@@ -76,7 +76,7 @@
                                 <% valuePrestation = valueAmortization + ((value + valueAmortization) * fee);%>
                                 <td style="text-align: center"><%= NumberFormat.getCurrencyInstance().format(valuePrestation) %></td>
                                 
-                                <% acumAmortization = acumAmortization + (valueAmortization + ((value + valueAmortization) * fee)); %>
+                                <% acumAmortization = acumAmortization + valuePrestation; %>
                             </tr>
                         </tbody>
                     <% } %>
